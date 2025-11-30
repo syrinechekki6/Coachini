@@ -1,0 +1,89 @@
+/* Custom styles for Coachini - Lounge Template */
+
+/* Dark Mode Support */
+body.light-mode {
+    --color-bg: var(--color-neutral-50);
+    --color-text: var(--color-neutral-900);
+    --color-text-bold: var(--color-neutral-950);
+    --color-text-light: var(--color-neutral-600);
+    --color-headings: var(--color-neutral-950);
+    --color-border: var(--color-neutral-200);
+}
+
+body.light-mode .s-header {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid var(--color-border);
+}
+
+body.light-mode .s-intro {
+    background: var(--color-neutral-50);
+}
+
+body.light-mode .s-about {
+    background: var(--color-neutral-50);
+}
+
+body.light-mode .s-testimonials {
+    background: var(--color-neutral-100);
+}
+
+body.light-mode .s-footer {
+    background: var(--color-neutral-100);
+}
+
+/* RTL Support */
+[dir="rtl"] {
+    direction: rtl;
+}
+
+[dir="rtl"] .header-nav__links {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .intro-header {
+    text-align: right;
+}
+
+[dir="rtl"] .intro-block-content__text-wrap {
+    text-align: right;
+}
+
+/* Logo styling */
+.logo span {
+    font-family: var(--font-2);
+    background: linear-gradient(135deg, var(--color-bg-secondary), var(--color-1-500));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Theme toggle button */
+.btn--ghost {
+    border: 1px solid var(--color-border);
+    transition: all 0.3s;
+}
+
+.btn--ghost:hover {
+    background: var(--color-bg-secondary);
+    color: var(--color-bg);
+    border-color: var(--color-bg-secondary);
+}
+
+/* Language switcher */
+.header-contact {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .intro-header__big-type {
+        font-size: 3rem;
+    }
+    
+    .intro-block-content {
+        flex-direction: column;
+    }
+}
+
